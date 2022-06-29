@@ -1,53 +1,51 @@
----
-name: Plugin
-route: /UnrealEngine5Plugin
-//menu: Unreal Engine
----
+# Unreal Engine 5.0 Plugin
 
-# Unreal Engine Plugin Plugin
+Gravity Layer plugin enables your game to be connected to linked wearable. This is the entry point for interoperable cloth nfs. Gravity Layer plugin will be initialized in with the game and nftrelated functions will be called through the Gravity layer subsystem.
 
-In order to show wearables in a game (scene) you need to do the next steps.
+### Getting Started
 
-1. Connect to a user’s Metamask wallet on Polygon chain.
+To enable linked wearable features, download our lates version of Gravity Layer Unreal Engine 5.0 plugin from our download page. 
 
-2. Authorize a user in Gravity API.
+  [Download](UnrealEngine5Download.md){ .md-button .md-button--primary }
 
-3. Fetch user’s wearables
+!!! info "Compatibility Info"
 
-4. Equip selected wearable.
+    Gravity Layer plugin is only compatible with Unreal Engine 5.0 and higher.
 
-Flow scheme:
+After downloading plugin, it should be enabled from unreal plugins. 
 
-<img src="/gravity-docs/UnityGravitySDKScheme.png" alt="Flow scheme" />
+  [Integration](UnrealEngine5Integration.md){ .md-button .md-button--primary }
 
-A single entry point for Gravity SDK is the class `GravityLayerEntryPoint`.
+After Integration Gravity Layer Plugin, Example project can be run and linked wearables can be displayed on Unreal Engine 5.0 Level.
 
-## Connection to Metamask
+  [Example](UnrealEngine5Example.md){ .md-button .md-button--primary }
 
-To connect to a Metamask wallet, call `Web3Connect()` method from `Assets/Plugins/GravityLayer/Example/Scripts/WebLogin.cs`.
+If you have any questions about the plugin you can check troubleshoot section.
 
-After successful logging in the user’s address will be available at `PlayerPrefs.GetString("Account")`.
+  [Troubleshoot](UnrealEngine5Troubleshoot.md){ .md-button .md-button--primary }
 
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/WebLogin.cs#L21). See `Assets/Plugins/GravityLayer/Example/Scenes/WebLogin.unity`.
 
-## Authorization
 
-The method `EstablishConnection()` from `Assets/Plugins/GravityLayer/CoreAsync/Utils/Connection.cs` authorizes users in Gravity API.
+### Dependencies
 
-It asks the user to sign a message via Metamask and if successful saves an authorization token for further requests.
+- glTFRuntime
 
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/GLayerManager.cs#L25). See `GravitySDK` game object and attached `GLayerManager.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+- VaRest
 
-## Fetching wearables
+All dependencies are in Gravity Layer plugin repository. All required plugin files can be found on the zip file.
 
-To fetch wearables call `FetchWearables()` method from `Assets/Plugins/GravityLayer/CoreAsync/Wearables/Wardrobe.cs`.
 
-It will fill in the public variable `List<Wearable> Wearables`.
 
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/CustomizedInventory.cs#L47). See `FetchGLayerWearables()` method in `Assets/Plugins/GravityLayer/Example/Scripts/CustomizedInventory.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+For further information:
 
-## Equipping wearables
+-  **glTFRuntime** plugin, you can find their documentation [here](https://github.com/rdeioris/glTFRuntime-docs/blob/master/README.md).
 
-To equip a wearable call `DownloadAvatar()` method from the `Downloader` class.
+-  **VaRest** plugin, you can find their documentation [here]([Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/VaRest-UE4-Plugin-40b98c54fc184033b60a42e0e4753536)).
+  
+  
 
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs#L23). See `DownloadAvatar()` method in `Assets/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+### Acknowledgments
+
+A big thank you to [Roberto De Ioris](https://www.unrealengine.com/marketplace/en-US/profile/Roberto+De+Ioris) for providing this amazing **glTFRuntime** plugin for free and also providing support to all the users. We encourage anybody using this plugin to consider purchasing [glTFRuntime](https://www.unrealengine.com/marketplace/en-US/product/gltfruntime) from the **Unreal Marketplace** and help support its development.
+
+A big thank you to [Vladimir Alyamkin](https://www.unrealengine.com/marketplace/en-US/profile/Vladimir+Alyamkin) for providing this amazing **[VaRest](https://www.unrealengine.com/marketplace/en-US/product/varest-plugin)** plugin for free and also providing support to all the users. 
