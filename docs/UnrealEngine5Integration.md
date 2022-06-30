@@ -1,53 +1,53 @@
+# Integration
+
+Gravity Layer Unreal Engine 5 Plugin Integration.
+
 ---
-name: Integration
-route: /UnrealEngine5Integration
-//menu: Unreal Engine
+
+Once, you download the plugins zip and copy its content to plugins folder, you can continue with enabling plugins in your projects.
+
+!!! info "Integration Info"
+
+    You need to restart your project if it was open during copying the plugin content.
+
+## Enable Plugins
+
+1. Open your project, and use settings button and open plugins menu. 
+
+![](assets\img\openPlugins.png)
+
+2. Search for  `Gravity Layer` and select the tick to enable gravity layer plugin. This will automaticly enable dependency plugins as well.
+- **glTFRuntime**
+
+- **VaRest**
+
+![](assets\img\enableplugin.png)
+
+    3. Click on `Restart`  button to enable Gravity Layer plugin. After restart you are finished with integrating gravity layer plugin into your game. 
+
+### Show Plugin Content
+
+  To view plugin content and sample map, you need to enable **Show Plugin Content ** from `Content Browser > Settings` menu.
+
+![](assets\img\ShowPluginContent.png)
+
+### Access Gravity Layer Plugin
+
+To access gravity layer plugin you need to add gravity layer plugin into your public dependencies. 
+
+1. Open your project solution and go to project's [PROJECT_NAME].Build.cs file and add "Gravity Layer" to your public dependency modules.
+   
+   ` PublicDependencyModuleNames.AddRange(new string[]
+   
+           {
+              ...
+               "GravityLayer"
+           });`
+
+After adding Gravity layer as a dependency to your project,  you can include graravity layer subsystem to your project.
+
 ---
 
-# Unreal Engine Plugin Integration
+Now, You can continue with Example Content for Gravity Layer.
 
-In order to show wearables in a game (scene) you need to do the next steps.
-
-1. Connect to a user’s Metamask wallet on Polygon chain.
-
-2. Authorize a user in Gravity API.
-
-3. Fetch user’s wearables
-
-4. Equip selected wearable.
-
-Flow scheme:
-
-<img src="/gravity-docs/UnityGravitySDKScheme.png" alt="Flow scheme" />
-
-A single entry point for Gravity SDK is the class `GravityLayerEntryPoint`.
-
-## Connection to Metamask
-
-To connect to a Metamask wallet, call `Web3Connect()` method from `Assets/Plugins/GravityLayer/Example/Scripts/WebLogin.cs`.
-
-After successful logging in the user’s address will be available at `PlayerPrefs.GetString("Account")`.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/WebLogin.cs#L21). See `Assets/Plugins/GravityLayer/Example/Scenes/WebLogin.unity`.
-
-## Authorization
-
-The method `EstablishConnection()` from `Assets/Plugins/GravityLayer/CoreAsync/Utils/Connection.cs` authorizes users in Gravity API. 
-
-It asks the user to sign a message via Metamask and if successful saves an authorization token for further requests.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/GLayerManager.cs#L25). See `GravitySDK` game object and attached `GLayerManager.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Fetching wearables
-
-To fetch wearables call `FetchWearables()` method from `Assets/Plugins/GravityLayer/CoreAsync/Wearables/Wardrobe.cs`. 
-
-It will fill in the public variable `List<Wearable> Wearables`.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/CustomizedInventory.cs#L47). See `FetchGLayerWearables()` method in `Assets/Plugins/GravityLayer/Example/Scripts/CustomizedInventory.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Equipping wearables
-
-To equip a wearable call `DownloadAvatar()` method from the `Downloader` class.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs#L23). See `DownloadAvatar()` method in `Assets/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+  [Example](UnrealEngine5Example.md){ .md-button .md-button--primary }

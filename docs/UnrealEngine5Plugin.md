@@ -1,5 +1,7 @@
 # Unreal Engine 5.0 Plugin
 
+---
+
 Gravity Layer plugin enables your game to be connected to linked wearable. This is the entry point for interoperable cloth nfs. Gravity Layer plugin will be initialized in with the game and nftrelated functions will be called through the Gravity layer subsystem.
 
 ### Getting Started
@@ -24,8 +26,6 @@ If you have any questions about the plugin you can check troubleshoot section.
 
   [Troubleshoot](UnrealEngine5Troubleshoot.md){ .md-button .md-button--primary }
 
-
-
 ### Dependencies
 
 - glTFRuntime
@@ -34,15 +34,11 @@ If you have any questions about the plugin you can check troubleshoot section.
 
 All dependencies are in Gravity Layer plugin repository. All required plugin files can be found on the zip file.
 
-
-
 For further information:
 
 -  **glTFRuntime** plugin, you can find their documentation [here](https://github.com/rdeioris/glTFRuntime-docs/blob/master/README.md).
 
 -  **VaRest** plugin, you can find their documentation [here]([Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/VaRest-UE4-Plugin-40b98c54fc184033b60a42e0e4753536)).
-  
-  
 
 ### Acknowledgments
 
