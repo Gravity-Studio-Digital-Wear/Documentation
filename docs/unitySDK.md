@@ -17,7 +17,7 @@ In order to show wearables in a game (scene) you need to do the next steps.
 
 Flow scheme:
 
-<img src="/gravity-docs/UnityGravitySDKScheme.png" alt="Flow scheme" />
+![](assets\UnityGravitySDKScheme.png)
 
 A single entry point for Gravity SDK is the class `GravityLayerEntryPoint`.
 

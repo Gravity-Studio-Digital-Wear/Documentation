@@ -1,53 +1,37 @@
+# Downloads
+
+Gravity Layer Unreal Engine 5 Plugin Downloads
+
 ---
-name: 1) Download
-route: /UnrealEngine5Download
-//menu: Unreal Engine
+
+!!! causion inline end "Project Info"
+
+    Gravity Layer Unreal Plugin is designed to work with C++ projects.
+
+##### Latest release
+
+[Download Gravity Layer Unreal Plugin](https://github.com/Gravity-Studio-Digital-Wear/GravityLayerUEPlugin){:target="_blank" .md-button .md-button--primary}
+
 ---
 
-# Unreal Engine Plugin Download
+Download the plugin:
 
-In order to show wearables in a game (scene) you need to do the next steps.
+1) Open Pluginin git repository.
 
-1. Connect to a user’s Metamask wallet on Polygon chain.
+2) Click on **Code** button.
 
-2. Authorize a user in Gravity API.
+3) Click on Download ZIP button.
 
-3. Fetch user’s wearables
+![](assets\img\downloadzip.png)
 
-4. Equip selected wearable.
+Intall the plugin:
 
-Flow scheme:
+1. To add plugins to your project, go to your **Plugins** folder under your project directory. If there is no Plugins folder, then you need to create one folder and name it "Plugins" under your project directory.
 
-<img src="/gravity-docs/UnityGravitySDKScheme.png" alt="Flow scheme" />
+2. Open Zip file and copy its content to Plugins folder.
 
-A single entry point for Gravity SDK is the class `GravityLayerEntryPoint`.
+---
 
-## Connection to Metamask
+Now, You can continue with integration process.
 
-To connect to a Metamask wallet, call `Web3Connect()` method from `Assets/Plugins/GravityLayer/Example/Scripts/WebLogin.cs`.
-
-After successful logging in the user’s address will be available at `PlayerPrefs.GetString("Account")`.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/WebLogin.cs#L21). See `Assets/Plugins/GravityLayer/Example/Scenes/WebLogin.unity`.
-
-## Authorization
-
-The method `EstablishConnection()` from `Assets/Plugins/GravityLayer/CoreAsync/Utils/Connection.cs` authorizes users in Gravity API. 
-
-It asks the user to sign a message via Metamask and if successful saves an authorization token for further requests.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/GLayerManager.cs#L25). See `GravitySDK` game object and attached `GLayerManager.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Fetching wearables
-
-To fetch wearables call `FetchWearables()` method from `Assets/Plugins/GravityLayer/CoreAsync/Wearables/Wardrobe.cs`. 
-
-It will fill in the public variable `List<Wearable> Wearables`.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/CustomizedInventory.cs#L47). See `FetchGLayerWearables()` method in `Assets/Plugins/GravityLayer/Example/Scripts/CustomizedInventory.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Equipping wearables
-
-To equip a wearable call `DownloadAvatar()` method from the `Downloader` class.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs#L23). See `DownloadAvatar()` method in `Assets/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+  [Integration](UnrealEngine5Integration.md){ .md-button .md-button--primary }
