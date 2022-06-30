@@ -1,53 +1,37 @@
+# Example
+
+Gravity Layer Unreal Engine 5 Plugin Example.
+
 ---
-name: Example
-route: /UnrealEngine5Example
-//menu: Unreal Engine
----
 
-# Unreal Engine Plugin Example
+!!! causion inline end "Project Info"
 
-In order to show wearables in a game (scene) you need to do the next steps.
+    To open Gravity Layer example level, you should enable "Show Plugin Content" under Content Drawer > Settings > Show Plugin Content.
 
-1. Connect to a user’s Metamask wallet on Polygon chain.
+## Open Example Level
 
-2. Authorize a user in Gravity API.
+To how the sample integration process, you can find example level for out plugin under `Plugins \ Gravity Layer Content \ Level` folder. Open level and press play button to see 3 characters. Left most avatar is loaded from fbx file to test the original model. Character on the middle will be added to level after few seconds which will be loaded from Gravity Layer servers. Right most character will be loaded from glb files to test the model. 
 
-3. Fetch user’s wearables
+![](assets\img\examplelevel.png)
 
-4. Equip selected wearable.
+A few seconds after the level starts, you will see three characters. 
 
-Flow scheme:
+![](assets\img\DifferentCharacters.png)
 
-<img src="/gravity-docs/UnityGravitySDKScheme.png" alt="Flow scheme" />
+## Outliner
 
-A single entry point for Gravity SDK is the class `GravityLayerEntryPoint`.
+In the outliner, there are 3 different actors:
 
-## Connection to Metamask
+- BP_GL_LoadFromFileActor : loads character form glb file.
 
-To connect to a Metamask wallet, call `Web3Connect()` method from `Assets/Plugins/GravityLayer/Example/Scripts/WebLogin.cs`.
+- BP_GravityLayer : loads character from Gravity layer server.
 
-After successful logging in the user’s address will be available at `PlayerPrefs.GetString("Account")`.
+- BP_Sample_FBX : fbx file to test.
 
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/WebLogin.cs#L21). See `Assets/Plugins/GravityLayer/Example/Scenes/WebLogin.unity`.
+![](assets\img\outliner.png)
 
-## Authorization
+## Gravity Layer Chracter
 
-The method `EstablishConnection()` from `Assets/Plugins/GravityLayer/CoreAsync/Utils/Connection.cs` authorizes users in Gravity API. 
+You should select avatar skeleton for your characters skeleton system.
 
-It asks the user to sign a message via Metamask and if successful saves an authorization token for further requests.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/GLayerManager.cs#L25). See `GravitySDK` game object and attached `GLayerManager.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Fetching wearables
-
-To fetch wearables call `FetchWearables()` method from `Assets/Plugins/GravityLayer/CoreAsync/Wearables/Wardrobe.cs`. 
-
-It will fill in the public variable `List<Wearable> Wearables`.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/CustomizedInventory.cs#L47). See `FetchGLayerWearables()` method in `Assets/Plugins/GravityLayer/Example/Scripts/CustomizedInventory.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
-
-## Equipping wearables
-
-To equip a wearable call `DownloadAvatar()` method from the `Downloader` class.
-
-[Example](https://github.com/Gravity-Studio-Digital-Wear/UnitySDK-WebGL-example/blob/main/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs#L23). See `DownloadAvatar()` method in `Assets/Plugins/GravityLayer/Example/Scripts/Inventory/ItemWearable.cs` script in `Assets/Plugins/GravityLayer/Example/Scenes/ExampleGravitySDK.unity` scene.
+![](assets\img\SkeletalSelection.png)

@@ -37,8 +37,7 @@ To access gravity layer plugin you need to add gravity layer plugin into your pu
 
 1. Open your project solution and go to project's [PROJECT_NAME].Build.cs file and add "Gravity Layer" to your public dependency modules.
    
-   ` PublicDependencyModuleNames.AddRange(new string[]
-   
+           PublicDependencyModuleNames.AddRange(new string[]
            {
               ...
                "GravityLayer"
