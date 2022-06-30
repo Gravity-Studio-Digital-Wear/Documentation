@@ -22,7 +22,7 @@ Download the plugin:
 
 3) Click on Download ZIP button.
 
-![](static\img\downloadzip.png)
+![](..\static\img\downloadzip.png)
 
 Intall the plugin:
 
