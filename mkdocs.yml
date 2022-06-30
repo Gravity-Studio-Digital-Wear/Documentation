@@ -7,10 +7,9 @@ nav:
         - Usage Example: examples.md
     - Unreal Engine 5.0 Plugin:
         - Introduction: UnrealEngine5Plugin.md
-        - Integration: UnrealEngine5Integration.md
-        - Example: UnrealEngine5Integration.md
         - Download: UnrealEngine5Download.md
-        - Troubleshoot: UnrealEngine5Troubleshoot.md
+        - Integration: UnrealEngine5Integration.md
+        - Example: UnrealEngine5Example.md
 theme:
     name: 'material'
     logo: 'assets/gravity-logo-light.svg'
