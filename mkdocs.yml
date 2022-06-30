@@ -2,17 +2,17 @@ site_name: Gravity Layer Documentation
 nav:
     - Getting Started: index.md
     - Unity 3D SDK: 
-        - Introduction: unitySDK.md
-        - Installation: installation.md
-        - Usage Example: examples.md
+        -  Unity/index.md
+        - Installation: Unity/installation.md
+        - Usage Example: Unity/examples.md
     - Unreal Engine 5.0 Plugin:
-        - Introduction: UnrealEngine5Plugin.md
-        - Download: UnrealEngine5Download.md
-        - Integration: UnrealEngine5Integration.md
-        - Example: UnrealEngine5Example.md
+        - UE5/index.md
+        - Download: UE5/UnrealEngine5Download.md
+        - Integration: UE5/UnrealEngine5Integration.md
+        - Example: UE5/UnrealEngine5Example.md
 theme:
     name: 'material'
-    logo: 'assets/gravity-logo-light.svg'
+    logo: 'static/gravity-logo-light.svg'
     icon:
       admonition:
           note: octicons/tag-16
@@ -27,6 +27,11 @@ theme:
           bug: octicons/bug-16
           example: octicons/beaker-16
           quote: octicons/quote-16
+    features:
+      - navigation.expand
+      - navigation.prune 
+      - navigation.indexes
+      - toc.follow
 plugins:
   - search
 markdown_extensions:
