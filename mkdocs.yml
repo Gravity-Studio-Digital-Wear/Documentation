@@ -12,7 +12,7 @@ nav:
         - Example: UnrealEngine5Example.md
 theme:
     name: 'material'
-    logo: 'assets/gravity-logo-light.svg'
+    logo: 'static/gravity-logo-light.svg'
     icon:
       admonition:
           note: octicons/tag-16
