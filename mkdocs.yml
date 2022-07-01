@@ -10,6 +10,7 @@ nav:
         - Download: UE5/UnrealEngine5Download.md
         - Integration: UE5/UnrealEngine5Integration.md
         - Example: UE5/UnrealEngine5Example.md
+        - Get NFT Process: UE5/GravityLayerPlugin.md
 theme:
     name: 'material'
     logo: 'docs/static/gravity-logo-light.svg'

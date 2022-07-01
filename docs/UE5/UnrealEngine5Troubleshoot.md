@@ -6,4 +6,8 @@ route: /UnrealEngine5Troubleshoot
 
 # Unreal Engine Plugin Troubleshoot
 
-In order to show wearables in a game (scene) you need to do the next steps.
+You can reach us from discord channel.
+
+
+
+Link to discord
