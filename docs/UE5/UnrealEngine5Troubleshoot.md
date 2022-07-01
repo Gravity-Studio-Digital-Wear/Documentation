@@ -8,6 +8,4 @@ route: /UnrealEngine5Troubleshoot
 
 You can reach us from discord channel.
 
-
-
 Link to discord

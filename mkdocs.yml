@@ -11,9 +11,11 @@ nav:
         - Integration: UE5/UnrealEngine5Integration.md
         - Example: UE5/UnrealEngine5Example.md
         - Get NFT Process: UE5/GravityLayerPlugin.md
+        - Troubleshoot: UE5/UnrealEngine5Troubleshoot.md
 theme:
     name: 'material'
     logo: '../static/gravity-logo-light.svg'
+    favicon: '../static/favicon.ico'
     icon:
       admonition:
           note: octicons/tag-16
