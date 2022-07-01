@@ -15,6 +15,7 @@ nav:
 theme:
     name: 'material'
     logo: '../static/gravity-logo-light.svg'
+    favicon: '../static/favicon.ico'
     icon:
       admonition:
           note: octicons/tag-16

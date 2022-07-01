@@ -6,27 +6,51 @@ To download nfts and display on your project:
 
 2) Download NFT Inventory 
 
-3) Display NFT Items 
+3) Get NFTs of Account 
 
 4) Gravity Layer API Call
 
 5) Gravity Layer Actor
+   
+   5.1 Gravity Layer Actor Component
+   
+   5.2 Gravity Layer File Load Component
+   
+   
 
 ---
 
 ## Configure Metaverse SDK
 
-To configure metaverse sdk open gravity layer `GravityLayer::Configure()` function and set sdk configuration parameters of account, api url and secret. 
+To configure metaverse sdk open gravity layer  `GravityLayer::Configure()` function and set sdk configuration parameters of account, api url and secret. 
 
-On Configure function gravity layer pluging
+On Configure function gravity layer plugin, Metaverse entry point is configured to have update events on NFT responses. It will listen stock, wardrobe and wardrobe services update events.
+
+
 
 ```
-
+GLMetaverseEntryPoint->GetStock()->OnStockUpdated.AddDynamic(this, &UGravityLayer::OnStockUpdate);
+GLMetaverseEntryPoint->GetWardrobe()->OnWardrobeUpdated.AddDynamic(this, &UGravityLayer::OnWardrobeUpdate);
+GLMetaverseEntryPoint->GetWardrobeServices()->OnWearableMetadataUpdate.AddDynamic(this, &UGravityLayer::OnWearableServiceUpdate);
 ```
 
 ## Download NFT Inventory
 
-To Download NFT inventory, `UGravityLayer::GetAllInteroperableWearables()`should be called. This function will send a request to metaverse interface to download inventory with restfull cals. Results will be called to through events. 
+To download NFT inventory, `UGravityLayer::GetAllInteroperableWearables()`should be called. This function will send a request to metaverse interface to download inventory with restfull cals. Results will be distributed  through `OnStockUpdated` event. `UGravityLayer::OnStockUpdate` will be called when this update events fired. 
+
+
+
+## Get NFTs of Account
+
+To download user NFTs' GetUserInteroperableWearables method should be used. 
+
+```
+void UGravityLayer::GetUserInteroperableWearables(const FString& Account)
+```
+
+Responses to this function wil be called to `UGravityLayer::OnWardrobeUpdate()` function.
+
+
 
 ## Gravity Layer API Call
 
@@ -42,46 +66,20 @@ Gravity Layer Module is responsible for starting up the plugin. Entry point of G
 UGravityLayer* GLSubSystem = GEngine->GetEngineSubsystem<UGravityLayer>();
 ```
 
----
 
-### Getting Started
 
-To enable NFT wearable features, download our lates version of Gravity Layer Unreal Engine 5.0 plugin from our download page. 
+## Gravity Layer Actor
 
-  [Download](UnrealEngine5Download.md){ .md-button .md-button--primary }
+Gravity Layer actor is used to download and diplay NFT's on the level.  It has two Components : Skeletal Mesh component and Gravity Layer Component
 
-!!! info "Compatibility Info"
 
-    Gravity Layer plugin is only compatible with Unreal Engine 5.0 and higher.
 
-After downloading plugin, it should be enabled from unreal plugins. 
+### Gravity Layer Actor Component
 
-  [Integration](UnrealEngine5Integration.md){ .md-button .md-button--primary }
+Gravity Layer Actor Component is used for displaying nfs on levels as an object. It will get NFT model from Gravity Layer system  with contact address and tokenId and set gravity layer actors skeletal mesh and 
 
-After Integration Gravity Layer Plugin, Example project can be run and NFT wearables can be displayed on Unreal Engine 5.0 Level.
 
-  [Example](UnrealEngine5Example.md){ .md-button .md-button--primary }
 
-If you have any questions about the plugin you can check troubleshoot section.
+### Gravity Layer File Load Component
 
-  [Troubleshoot](UnrealEngine5Troubleshoot.md){ .md-button .md-button--primary }
-
-### Dependencies
-
-- glTFRuntime
-
-- VaRest
-
-All dependencies are in Gravity Layer plugin repository. All required plugin files can be found on the zip file.
-
-For further information:
-
--  **glTFRuntime** plugin, you can find their documentation [here](https://github.com/rdeioris/glTFRuntime-docs/blob/master/README.md).
-
--  **VaRest** plugin, you can find their documentation [here]([Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://www.notion.so/VaRest-UE4-Plugin-40b98c54fc184033b60a42e0e4753536)).
-
-### Acknowledgments
-
-A big thank you to [Roberto De Ioris](https://www.unrealengine.com/marketplace/en-US/profile/Roberto+De+Ioris) for providing this amazing **glTFRuntime** plugin for free and also providing support to all the users. We encourage anybody using this plugin to consider purchasing [glTFRuntime](https://www.unrealengine.com/marketplace/en-US/product/gltfruntime) from the **Unreal Marketplace** and help support its development.
-
-A big thank you to [Vladimir Alyamkin](https://www.unrealengine.com/marketplace/en-US/profile/Vladimir+Alyamkin) for providing this amazing **[VaRest](https://www.unrealengine.com/marketplace/en-US/product/varest-plugin)** plugin for free and also providing support to all the users. 
+Gravity Layer File Load Component is used to test runtime asset delivery system. It will load glb files from local disk and display on level as an object.
