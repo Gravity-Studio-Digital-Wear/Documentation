@@ -4,7 +4,7 @@ Gravity Layer Unreal Engine 5 Plugin Integration.
 
 ---
 
-Once, you download the plugins zip and copy its content to plugins folder, you can continue with enabling plugins in your projects.
+Once, you download the plugins zip and open `GravityLayerUEPlugin-Plugins` folder.  Copy its content to plugins folder, you can continue with enabling plugins in your projects.
 
 !!! info "Integration Info"
 
