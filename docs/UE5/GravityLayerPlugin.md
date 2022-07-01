@@ -1,8 +1,52 @@
-# Unreal Engine 5.0 Plugin
+# Get NFT Process
+
+To download nfts and display on your project:
+
+1) Configure Metaverse SDK
+
+2) Download NFT Inventory 
+
+3) Display NFT Items 
+
+4) Gravity Layer API Call
+
+5) Gravity Layer Actor
 
 ---
 
-Gravity Layer plugin enables you to upload to NFT wearables into your project. This is the entry point for interoperable clothes. Gravity Layer plugin will be initialized with the project and NFT related functions will be called through the Gravity layer subsystem.
+## Configure Metaverse SDK
+
+To configure metaverse sdk open gravity layer `GravityLayer::Configure()` function and set sdk configuration parameters of account, api url and secret. 
+
+On Configure function gravity layer pluging
+
+```
+
+```
+
+
+
+## Download NFT Inventory
+
+To Download NFT inventory, `UGravityLayer::GetAllInteroperableWearables()`should be called. This function will send a request to metaverse interface to download inventory with restfull cals. Results will be called to through events. 
+
+## Gravity Layer API Call
+
+Gravity Layer Module is responsible for starting up the plugin. Entry point of Gravity Layer Plugins is GravityLayer subsystem. To access gravity layer subsystem you should include ` "GravityLayer.h"  `header and call get engine subsystem.
+
+```
+// Include gravity layer header to access gravity layer subsystem
+
+\#include "GravityLayer.h"
+
+...
+
+UGravityLayer* GLSubSystem = GEngine->GetEngineSubsystem<UGravityLayer>();
+```
+
+---
+
+
 
 ### Getting Started
 
