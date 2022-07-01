@@ -36,14 +36,16 @@ Once, you download the plugins zip and copy its content to plugins folder, you c
 To access gravity layer plugin you need to add gravity layer plugin into your public dependencies. 
 
 1. Open your project solution and go to project's [PROJECT_NAME].Build.cs file and add "Gravity Layer" to your public dependency modules.
-```
+   
+   ```
            PublicDependencyModuleNames.AddRange(new string[]
            {
                ...
                "GravityLayer"
            });`
-```
-After adding Gravity layer as a dependency to your project,  you can include graravity layer subsystem to your project.
+   ```
+   
+   After adding Gravity layer as a dependency to your project,  you can include graravity layer subsystem to your project.
 
 ---
 
