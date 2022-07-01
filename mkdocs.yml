@@ -13,7 +13,7 @@ nav:
         - Get NFT Process: UE5/GravityLayerPlugin.md
 theme:
     name: 'material'
-    logo: 'docs/static/gravity-logo-light.svg'
+    logo: '../static/gravity-logo-light.svg'
     icon:
       admonition:
           note: octicons/tag-16
