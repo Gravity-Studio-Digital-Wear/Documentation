@@ -24,8 +24,6 @@ On Configure function gravity layer pluging
 
 ```
 
-
-
 ## Download NFT Inventory
 
 To Download NFT inventory, `UGravityLayer::GetAllInteroperableWearables()`should be called. This function will send a request to metaverse interface to download inventory with restfull cals. Results will be called to through events. 
@@ -45,8 +43,6 @@ UGravityLayer* GLSubSystem = GEngine->GetEngineSubsystem<UGravityLayer>();
 ```
 
 ---
-
-
 
 ### Getting Started
 
