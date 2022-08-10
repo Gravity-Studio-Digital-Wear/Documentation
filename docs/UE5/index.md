@@ -2,7 +2,7 @@
 
 ---
 
-Gravity Layer plugin enables you to upload to NFT wearables into your project. This is the entry point for interoperable clothes. Gravity Layer plugin will be initialized with the project and NFT related functions will be called through the Gravity layer subsystem.
+Gravity Layer plugin enables you to upload NFT wearables into your project. Gravity Layer plugin will be initialized with the project and NFT related functions will be called through the Gravity Layer subsystem.
 
 ### Getting Started
 
