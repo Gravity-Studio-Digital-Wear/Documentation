@@ -10,7 +10,7 @@ Gravity Layer Unreal Engine 5 Plugin Downloads
 
 ##### Latest release
 
-[Download Gravity Layer Unreal Plugin](https://github.com/Gravity-Studio-Digital-Wear/GravityLayerUEPlugin){:target="_blank" .md-button .md-button--primary}
+[Download Gravity Layer Unreal Plugin](https://github.com/Gravity-Studio-Digital-Wear/GravityLayerUEPlugin/releases){:target="_blank" .md-button .md-button--primary}
 
 ---
 
@@ -18,11 +18,10 @@ Download the plugin:
 
 1) Open Pluginin git repository.
 
-2) Click on **Code** button.
+2) Click on ** the lastest release**.
 
-3) Click on Download ZIP button.
+3) Click on Download Zip or Tar.gz button.
 
-![](../..\static\img\downloadzip.png)
 
 Intall the plugin:
 
