@@ -16,9 +16,9 @@ Gravity Layer Unreal Engine 5 Plugin Downloads
 
 Download the plugin:
 
-1) Open Pluginin git repository.
+1) Open Pluginin git relsease page.
 
-2) Click on ** the lastest release**.
+2) Go to ** the lastest release**.
 
 3) Click on Download Zip or Tar.gz button.
 
