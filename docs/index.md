@@ -6,8 +6,8 @@ Gravity SDK is a Unity and Unreal Engine package. It authorizes users who own NF
 
 To get Unity Package:
 
-  [Unity ](Unity\index.md){ .md-button .md-button--primary }
+  [Unity ](Unity\){ .md-button .md-button--primary }
 
 To get Unreal Engine Plugin:
 
-  [Unreal Engine](UE5\index.md){ .md-button .md-button--primary }
+  [Unreal Engine](UE5\){ .md-button .md-button--primary }
